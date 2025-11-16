@@ -15,7 +15,7 @@ export const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               <span className="decode-text" data-value="SZPONAR"></span>
             </h1>
-            <h2 className="text-sm md:text-lg lg:text-2xl text-gray-400 mb-8 min-h-[4rem] md:min-h-[5rem]">
+            <h2 className="text-sm md:text-lg lg:text-2xl text-gray-400 mb-2 md:mb-4 min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem]">
               <span className="typewriter" data-text="AI MANAGER // AUTOMATION EXPERT // N8N WIZARD"></span>
               <span className="cursor-blink"></span>
             </h2>

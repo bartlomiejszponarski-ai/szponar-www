@@ -11,7 +11,7 @@ export const Navigation = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10 text-sm text-gray-400 font-mono">
+        <div className="hidden md:flex space-x-4 lg:space-x-10 text-xs lg:text-sm text-gray-400 font-mono">
           <a href="#about" className="hover:text-cyan-400 hover:translate-y-[-2px] transition-all duration-200">[ O MNIE ]</a>
           <a href="#automations" className="hover:text-cyan-400 hover:translate-y-[-2px] transition-all duration-200">[ AUTOMATYZACJE ]</a>
           <a href="#events" className="hover:text-cyan-400 hover:translate-y-[-2px] transition-all duration-200">[ TARGI ]</a>
