@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@700&display=swap');
+
+@layer base {
+  :root {
+    --neon-cyan: #00f3ff;
+    --neon-green: #0aff00;
+    --bg-dark: #050505;
+    --panel-bg: #0a0a0a;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: #e0e0e0;
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Space Mono', monospace;
+}
+
+h1, h2, h3, .cyber-font {
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Tło siatki */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Efekt skanowania (scanline) */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+  background-size: 100% 4px;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Cyber Ramka dla zdjęcia */
+.cyber-frame {
+  position: relative;
+  padding: 10px;
+  background: var(--panel-bg);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    90% 100%,
+    0 100%
+  );
+  border: 1px solid #333;
+}
+
+.cyber-frame::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, var(--neon-cyan), transparent 40%, transparent 60%, var(--neon-green));
+  z-index: -1;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    90% 100%,
+    0 100%
+  );
+}
+
+.cyber-frame img {
+  display: block;
+  width: 100%;
+  filter: grayscale(100%) contrast(120%);
+  transition: filter 0.3s ease;
+}
+
+.cyber-frame:hover img {
+  filter: grayscale(0%) contrast(100%);
+}
+
+/* Dekoracyjne znaczniki rogów */
+.corner-decor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neon-cyan);
+  transition: all 0.3s ease;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-top: 0;
+  border-left: 0;
+}
+
+.card-hover:hover .corner-decor {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+/* Kursor */
+.cursor-blink {
+  display: inline-block;
+  width: 10px;
+  height: 1em;
+  background-color: var(--neon-green);
+  animation: blink 1s infinite;
+  vertical-align: text-bottom;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Ukrywanie tekstu przed animacją */
+.decode-target {
+  opacity: 0;
+}
+
+.decode-target.visible {
+  opacity: 1;
+}
+
+.selection {
+  background-color: rgb(6, 182, 212);
+  color: black;
+}
