@@ -35,7 +35,7 @@ export const HeroSection = () => {
 
               <div className="cyber-frame group">
                 <img
-                  src="/images/szponar-portrait.png"
+                  src={`${process.env.PUBLIC_URL}/images/szponar-portrait.png`}
                   alt="Szponar Portrait"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
