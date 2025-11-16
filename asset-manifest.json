@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/szponar-www/static/css/main.ef8c4392.css",
+    "main.js": "/szponar-www/static/js/main.0ed52e9d.js",
+    "static/js/453.549e4a9e.chunk.js": "/szponar-www/static/js/453.549e4a9e.chunk.js",
+    "index.html": "/szponar-www/index.html",
+    "main.ef8c4392.css.map": "/szponar-www/static/css/main.ef8c4392.css.map",
+    "main.0ed52e9d.js.map": "/szponar-www/static/js/main.0ed52e9d.js.map",
+    "453.549e4a9e.chunk.js.map": "/szponar-www/static/js/453.549e4a9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef8c4392.css",
+    "static/js/main.0ed52e9d.js"
+  ]
+}
