@@ -77,8 +77,8 @@ export const AutomationsSection = () => {
     <section id="automations" className="py-24 bg-neutral-900/20 relative">
       <div className="container mx-auto px-6">
         <div className="flex items-center mb-16">
-          <div className="w-2 h-8 bg-green-500 mr-4"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <div className="w-2 h-8 bg-green-500 mr-4 flex-shrink-0"></div>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white break-words">
             <span className="decode-text" data-value="AUTOMATYZACJE"></span>
           </h2>
         </div>

@@ -46,9 +46,9 @@ export const EventsSection = () => {
     <section id="events" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-16 border-b border-gray-800 pb-4">
-          <div>
+          <div className="flex-1 min-w-0">
             <div className="text-green-500 text-xs tracking-widest mb-2">PUBLIC SPEAKING</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white break-words">
               <span className="decode-text" data-value="TARGI & KONFERENCJE"></span>
             </h2>
           </div>
